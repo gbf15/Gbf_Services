@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GBF-Services | PUBG UC, Netflix, Spotify, Followers & More</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Reset */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+.whatsapp-icon {
+           position: fixed;
+            bottom: 5px;
+            right: 20px;
+            z-index: 999;
+            cursor: pointer;
+        }
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.site-header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.nav-menu {
+    list-style: none;
+    text-align: center;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.ct{
+    display: none;
+}
+
+/* Responsive Menu for Mobile */
+@media (max-width: 768px) {
+    .nav-menu li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+.site-header{
+    width: 100%;
+    padding: 0px;
+}
+
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 150px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.ca {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+.ca:hover {
+    background-color: #45a049;
+    cursor: pointer;
+    box-shadow: 1px 2px 1px 1px  #45a049;
+}
+
+.cta {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #45a049;
+}
+
+/* Products Section */
+.products-section {
+    padding: 50px 0;
+}
+
+.products-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.product-card p {
+    margin-bottom: 15px;
+}
+
+/* Responsive Product Grid */
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 50px 0;
+}
+
+.pricing-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: #f4f4f4;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+/* Responsive Pricing Cards */
+@media (max-width: 768px) {
+    .pricing-card {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+/* Reviews Section */
+.reviews-section {
+    padding: 50px 0;
+}
+
+.reviews-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.reviews-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.review-card {
+    background: white;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.review-card p {
+    font-style: italic;
+}
+
+.review-card h4 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Reviews Grid */
+@media (max-width: 768px) {
+    .review-card {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 50px 0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-item {
+    width: 30%;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Responsive FAQ Grid */
+@media (max-width: 768px) {
+    .faq-item {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 0;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Footer Section */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons li a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.social-icons li a:hover {
+    color: #4CAF50;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .cta {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+#p{
+    padding:-10px;
+}
+@media (max-width: 768px) {
+    #mainHeader {
+        display: none;
+        background: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+#mainHeader .logo {
+    font-size: 2rem;
+}
+
+#mainHeader .nav-menu {
+    list-style: none;
+    text-align: center;
+}
+
+#mainHeader .nav-menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#mainHeader .nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* CTA Button */
+.cta {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #45a049;
+}
+@media (max-width: 320px) {
+    .site-header{
+        width: 330px;
+    }
+    .review-card {
+        width: 800px;
+        margin: 20px 0;
+        
+    }
+    .reviews-section {
+    padding: 50px 0;
+    display: flex;
+}
+
+.reviews-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.reviews-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.review-card {
+    background: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    
+}
+
+.review-card p {
+    font-style: italic;
+    
+}
+
+.review-card h4 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    
+}
+}
+/* Reviews Section */
+.reviews-section {
+    padding: 50px 0;
+}
+
+.reviews-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.reviews-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    background: white;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.review-card p {
+    font-style: italic;
+}
+
+.review-card h4 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Reviews Grid (Mobile) */
+@media (max-width: 768px) {
+    .reviews-grid {
+        display: block;
+    }
+
+    .review-card {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 50px 0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.faq-item {
+    width: 30%;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+/* Responsive FAQ Grid (Mobile) */
+@media (max-width: 768px) {
+    .faq-grid {
+        display: block;
+    }
+
+    .faq-item {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+#p{
+    padding: 38px;
+}
+@media only screen and (max-width:600px) {
+.whatsapp-icon img {
+                width: 50px;
+                margin-left: 10px
+            }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header" ><br>
+        <div class="container">
+            <h1  class="logo">GBF-SERVICES</h1>
+            <a href="index.html"><img src="img/Untitled-removebg-preview (3).png" alt="" width="120px"></a>
+            <ul class="nav-menu" id="mainHeader">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container"><br>
+            <p id="p"></p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <a style="text-decoration: none;color: black" href="tiktok-flwrs.html">
+                    <img src="img/tiktok-logo-2-removebg-preview.png" width="350px" alt="PUBG UC">
+                    <p style="font-size: 22px;"><b>Followers</b></p>
+                    
+                    <a href="tiktok-flwrs.html"><button class="ca">Show More</button></a></a>
+                </div>
+                <div class="product-card">
+                    <a style="text-decoration: none;color: black" href="tiktok-likes.html">
+                    <img src="img/tiktok-logo-2-removebg-preview.png" width="350px" alt="PUBG UC">
+                    <p style="font-size: 22px;"><b>Likes</b></p>
+                    
+                    <a href="tiktok-likes.html"><button class="ca">Show More</button></a></a>
+                </div>
+                <div class="product-card">
+                    <a style="text-decoration: none;color: black" href="tiktok-views.html">
+                    <img src="img/tiktok-logo-2-removebg-preview.png" width="350px" alt="PUBG UC">
+                    <p style="font-size: 22px;"><b>Views</b></p>
+                    
+                    <a href="tiktok-views.html"><button class="ca">Show More</button></a></a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p>"GBF-Services made it easy to buy PUBG UC at a great price!"</p>
+                    <h4>- John youssef</h4>
+                </div>
+                <div class="review-card">
+                    <p>"I love their Netflix accounts, really good value for the price."</p>
+                    <h4>- Sarah Ahmed</h4>
+                </div>
+                <div class="review-card">
+                    <p>"Great service for growing Instagram followers quickly."</p>
+                    <h4>- ali ali</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="whatsapp-icon"><a href="https://wa.me/+96103226752"><img src="img/whatsapp.svg" width="100px" style="border-radius:50%" alt="WhatsApp"></a></div>
+
+    <footer>
+        <div class="containe1">
+            <p>&copy; 2024 GBF-Services. All rights reserved.</p>
+            <ul class="social-icons">
+                <li><a target="_blank" href="https://www.instagram.com/gbf_services/"><i class="fab fa-instagram"></i></a></li>
+                <li><a target="_blank" href="https://www.tiktok.com/@gbfservices6"><i class="fab fa-tiktok"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <div class="sc-pbWVv lksINo"><div class="sc-fzoLag sc-psOyd bZAqsX"><div class="sc-qPmLO gspUft"><div><p class="sc-fznKkj WmZaJ">Gbf</p><div class="sc-fzoyAV fQsatj" style="margin: 2px 0px 0px; padding: 0px;"><p class="sc-fzpans jhytWQ">Login</p></div></div><button type="button" class="sc-fznxsB bYzeso">Log out</button></div></div><div class="sc-fzoLag sc-psOyd bZAqsX"><form><div class="sc-fzoiQi dvgXeb"><div class="sc-qWfkp gtOuPy"><label for="old_password" class="sc-fzoNJl loPePV"><div class="sc-fzoXWK gHtLLO">Old password</div></label><div class="sc-ptScb bDrOJs"><input type="password" id="old_password" name="old_password" autocomplete="off" placeholder="Old password" class="sc-pZcYF eIXCnf" value=""><div src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTQuNSAxMnMzLTQuNSA3LjUtNC41IDcuNSA0LjUgNy41IDQuNS0zIDQuNS03LjUgNC41UzQuNSAxMiA0LjUgMTJ6IiBzdHJva2U9IiNBRkMwRDUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMTMuOSAxMmExLjkgMS45IDAgMTAtMy44IDAgMS45IDEuOSAwIDAwMy44IDB6IiBzdHJva2U9IiNBRkMwRDUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=" class="sc-qOjhQ flyWlC"></div></div></div></div><div class="sc-fzoiQi dvgXeb"><div class="sc-qWfkp gtOuPy"><label for="password" class="sc-fzoNJl loPePV"><div class="sc-fzoXWK gHtLLO">Change password</div></label><div class="sc-ptScb bDrOJs"><input type="password" id="password" name="password" autocomplete="off" placeholder="New password" class="sc-pZcYF eIXCnf" value=""><div src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTQuNSAxMnMzLTQuNSA3LjUtNC41IDcuNSA0LjUgNy41IDQuNS0zIDQuNS03LjUgNC41UzQuNSAxMiA0LjUgMTJ6IiBzdHJva2U9IiNBRkMwRDUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48cGF0aCBkPSJNMTMuOSAxMmExLjkgMS45IDAgMTAtMy44IDAgMS45IDEuOSAwIDAwMy44IDB6IiBzdHJva2U9IiNBRkMwRDUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz48L3N2Zz4=" class="sc-qOjhQ flyWlC"></div></div></div></div><div class="sc-fzoiQi dvgXeb" style="display: flex; justify-content: space-between; align-items: center;"><div class="sc-fzqKVi inEYMP"><input name="revoke_old_sessions" type="checkbox" id="revoke_old_sessions" class="sc-fzoOEf eXkYNB" value=""><label for="revoke_old_sessions" class="sc-fzoCUK fZKPwz">Revoke old sessions</label></div><button type="submit" disabled="" class="sc-fznxsB gLdEMf">Change password</button></div></form></div><div class="sc-fzoLag sc-psOyd bZAqsX"><form><div class="sc-fzoiQi dvgXeb"><div class="sc-qWfkp gtOuPy"><label for="email" class="sc-fzoNJl loPePV"><div class="sc-fzoXWK gHtLLO">Email</div></label><input id="email" name="email" autocomplete="off" placeholder="email@example.com" class="sc-pZcYF eIXCnf" value="idccdi93@gmail.com"></div></div><div class="sc-fzoyAV fQsatj" style="margin: 20px 0px 0px; padding: 0px;"><button type="submit" disabled="" class="sc-fznxsB fDjvyP">Save</button></div></form></div><div class="sc-fzoLag sc-psOyd bZAqsX"><div class="sc-fzoiQi dvgXeb" style="display: flex; align-items: center; justify-content: space-between;"><div class="sc-pzZNP itHXfc"><img src="data:image/png;base64,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" class="sc-qXiOn kuunvL"><div><p class="sc-fznZeY hJcvjB">Google Authenticator</p><div class="sc-fzoyAV fQsatj" style="margin: 2px 0px 0px; padding: 0px;"><p class="sc-fzqNJr jHMrUj">Confirm log-in using code to protect your account</p></div></div></div><button class="sc-fznxsB gLdEMf">Attach</button></div></div><div class="sc-fzoLag sc-psOyd bZAqsX"><div class="sc-fzoyAV fQsatj" style="margin: 20px 0px 0px; padding: 0px;"><form><div><div class="sc-oTDcV eREKvo"><label class="sc-fznZeY sc-pbzVk ieMMHv">Language</label><div><div><div class="sc-pbMuv sc-pkgFA ihjKtl"><p class="sc-fznZeY sc-psDXd hrbItR"><div style="display: flex; align-items: center;"><img alt="591441-network" src="https://cs1.socpanel.com/cs1/languages/en.png?2" class="sc-pjtCf jEELdN"><p class="sc-fznZeY hJcvjB selected-text">English</p></div></p></div></div></div></div></div></form></div></div></div>
+</body>
+</html>
